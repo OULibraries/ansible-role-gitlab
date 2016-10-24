@@ -1,0 +1,6 @@
+---
+# tasks file for OULibraries.gitlab
+
+- include: install.yml
+  sudo: yes
+
