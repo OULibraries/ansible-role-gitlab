@@ -1,30 +1,30 @@
 ---
 
 - name: Install curl
-  sudo: yes
   dnf:
-    name: curl
-    state: present
+  name: curl
+  state: present
+  become: true
 
 - name: Install policycoreutils
-  sudo: yes
   dnf:
-    name: policycoreutils
-    state: present
+  name: policycoreutils
+  state: present
+  become: true
 
 - name: Install openssh-server
-  sudo: yes
-    name: openssh-server
-    state: present
+  name: openssh-server
+  state: present
+  become: true
 
 - name: Install openssh-clients
-  sudo: yes
-    name: openssh-clients
-    state: present
+  name: openssh-clients
+  state: present
+  become: true
 
 - name: Install postfix
-  sudo: yes
-    name: postfix
-    state: present
+  name: postfix
+  state: present
+  become: true
 
 
