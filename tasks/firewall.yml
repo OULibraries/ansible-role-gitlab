@@ -4,7 +4,7 @@
   service:
     name: firewalld
     state: enable
-    state: start
+    state: started
 
 - name: Permanantly add HTTP service to firewalld
   become: true
