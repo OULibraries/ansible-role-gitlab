@@ -1,0 +1,10 @@
+---
+
+- name: Add the GitLab package server
+  command: >
+    curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
+
+- name: Install the GitLab package
+  yum:
+    name: gitlab-ce
+    state: present

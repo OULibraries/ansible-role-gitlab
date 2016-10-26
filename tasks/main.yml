@@ -6,3 +6,6 @@
 
 - include: firewall.yml
   sudo: yes
+
+- include: install.yml
+  sudo: yes
