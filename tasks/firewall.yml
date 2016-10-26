@@ -1,8 +1,7 @@
 ---
 
 - name: Permanantly add HTTP service to firewalld
-  firewalld:
-    service: http
-    permanent: true
-    state: enabled
+  become: true
+  command: >
+    firewall-cmd --permanent --add-service=http 
   notify: Reload firewalld
