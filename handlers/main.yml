@@ -19,7 +19,7 @@
 - name: Start postfix
   service:
    name: postfix
-    state: start
+   state: start
 
 - name: Reload firewalld
   service:
