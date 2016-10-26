@@ -1,0 +1,36 @@
+---
+
+- name: Install curl
+  yum:
+    name: curl
+    state: present
+  become: true
+
+- name: Install policycoreutils
+  yum:
+    name: policycoreutils
+    state: present
+  become: true
+
+- name: Install openssh-server
+  yum:
+    name: openssh-server
+    state: present
+  become: true
+  notify: Enable sshd
+  notify: Start sshd
+
+- name: Install openssh-clients
+  yum:
+    name: openssh-clients
+    state: present
+  become: true
+
+- name: Install postfix
+  yum:
+    name: postfix
+    state: present
+  become: true
+  notify: Enable postfix
+  notify: Start postfix
+
