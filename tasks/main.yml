@@ -1,6 +1,8 @@
 ---
 # tasks file for OULibraries.gitlab
 
-- include: install.yml
+- include: yum.yml
   sudo: yes
 
+- include: firewall.yml
+  sudo: yes
