@@ -1,2 +1,28 @@
 ---
 # handlers file for OULibraries.gitlab
+
+- name: Enable sshd
+  service:
+    name: sshd
+    state: enable
+
+- name: Start sshd
+  service:
+    name: sshd
+    state: start
+
+- name: Enable postfix
+  service:
+    name: postfix
+    state: enable
+
+- name: Start postfix
+  service:
+   name: postfix
+    state: start
+
+- name: Reload firewalld
+  service:
+    name: firewalld
+    state: reload
+
