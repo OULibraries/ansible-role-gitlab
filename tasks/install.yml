@@ -7,3 +7,6 @@
   yum:
     name: gitlab-ce
     state: present
+
+- name: Configure and start GitLab
+  raw: gitlab-ctl reconfigure
