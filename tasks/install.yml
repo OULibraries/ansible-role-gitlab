@@ -2,11 +2,11 @@
 
 - name: Download GitLab Repo
   get_url:
-    url: "{{ gitlab_download_url }}"
+    url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh
     dest: /usr/src/gitlab.rpm.sh
     mode: 0755
     validate_certs: no
-  checksum: "md5:{{ gitlab_md5sum }}"
+    checksum: "md5:{{ gitlab_md5sum }}"
 
 - name: Install GitLab Repo
   shell: /usr/src/gitlab.rpm.sh
