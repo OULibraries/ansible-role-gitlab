@@ -1,12 +1,20 @@
 ---
 
-- name: Add the GitLab package server
-  shell: curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
+- name: Download GitLab Repo
+  get_url:
+    url: "{{ gitlab_download_url }}"
+    dest: /usr/src/gitlab.rpm.sh
+    mode: 0755
+    validate_certs: no
+  checksum: "md5:{{ gitlab_md5sum }}"
 
-- name: Install the GitLab package
+- name: Install GitLab Repo
+  shell: /usr/src/gitlab.rpm.sh
+
+- name: Install GitLab
   yum:
     name: gitlab-ce
-    state: present
+    state: latest
 
 - name: Configure and start GitLab
-  raw: gitlab-ctl reconfigure
+  command: gitlab-ctl reconfigure
