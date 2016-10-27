@@ -9,9 +9,7 @@
     checksum: "md5:{{ gitlab_md5sum }}"
 
 - name: Install GitLab Repo
-  shell: /usr/src/gitlab.rpm.sh
-  async: 120
-  poll: 5
+  raw: /usr/src/gitlab.rpm.sh
   ignore_errors: true
   become: true
 
@@ -19,9 +17,6 @@
   yum:
     name: gitlab-ce
     state: latest
-  async: 120
-  poll: 5
-  ignore_errors: true
   become: true
 
 - name: Configure and start GitLab
