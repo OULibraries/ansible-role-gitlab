@@ -10,7 +10,7 @@
 
 - name: Install GitLab Repo
   shell: /usr/src/gitlab.rpm.sh
-  timeout: 90
+    timeout: 90
   ignore_errors: true
 
 - name: Install GitLab
