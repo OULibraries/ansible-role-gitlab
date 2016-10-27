@@ -10,14 +10,16 @@
 
 - name: Install GitLab Repo
   shell: /usr/src/gitlab.rpm.sh
-    timeout: 90
+  async: 120
+  poll: 5
   ignore_errors: true
 
 - name: Install GitLab
   yum:
     name: gitlab-ce
     state: latest
-  timeout: 120
+  async: 120
+  poll: 5
   ignore_errors: true
 
 - name: Configure and start GitLab
