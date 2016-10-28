@@ -15,6 +15,9 @@ gitlab_ssl_certificate_key: "/etc/gitlab/ssl/gitlab.vagrant.dev.key"
 gitlab_create_self_signed_cert: "true"
 gitlab_self_signed_cert_subj: "/C=US/ST=OKLAHOMA/L=NORMAN/O=University of Oklahoma/OU=OU Libraries/CN=vagrant.dev"
 
+# LDAP Configuration.
+# gitlab_ldap_enabled: "false"
+
 # Probably best to leave this as the default, unless doing testing.
 gitlab_restart_handler_failed_when: 'gitlab_restart.rc != 0'
 
