@@ -17,7 +17,12 @@
     name: gitlab-ce
     state: latest
   become: true
-  ignore_errors: true
+
+- name: Initialize GitLab
+  command: >
+    gitlab-ctl reconfigure
+    creates=/var/opt/gitlab/bootstrapped
+  failed_when: false
 
 - name: Configure and start GitLab
   command: gitlab-ctl reconfigure
