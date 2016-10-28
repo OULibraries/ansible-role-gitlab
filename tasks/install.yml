@@ -10,7 +10,6 @@
 
 - name: Install GitLab Repo
   raw: /usr/src/gitlab.rpm.sh
-    timeout: 180
   become: true
 
 - name: Install GitLab
