@@ -40,5 +40,14 @@ nginx['listen_port'] = "{{ gitlab_nginx_listen_port }}"
 nginx['listen_https'] = "{{ gitlab_nginx_listen_https }}"
 {% endif %}
 
+# GitLab SMTP
+## See https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/smtp.md
+gitlab_rails['smtp_enable'] = "{{ gitlab_email_enabled }}"
+gitlab_rails['smtp_address'] = "{{ gitlab_email_host }}"
+gitlab_rails['smtp_port'] = "{{ gitlab_email_port }}"
+gitlab_rails['smtp_domain'] = "{{ gitlab_email_domain }}"
+gitlab_rails['smtp_authentication'] = "{{ gitlab_email_authentication }}"
+gitlab_rails['smtp_enable_starttls_auto'] = "{{ gitlab_email_starttls }}"
+
 # To change other settings, see:
 # https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/README.md#changing-gitlab-yml-settings
