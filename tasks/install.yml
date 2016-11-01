@@ -10,13 +10,11 @@
 
 - name: Install GitLab Repo
   raw: /usr/src/gitlab.rpm.sh
-  become: true
 
 - name: Install GitLab
   yum:
     name: gitlab-ce
-    state: latest
-  become: true
+    state: installed
 
 - name: Initialize GitLab
   command: >
