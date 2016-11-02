@@ -13,6 +13,8 @@
 
 - name: Install GitLab
   command: yum install gitlab-ce -y
+  async: 600
+  poll: 30
 
 # Sometimes this fails out so we skip the failure
 - name: Initialize GitLab
