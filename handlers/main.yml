@@ -1,6 +1,11 @@
 ---
 # handlers file for OULibraries.gitlab
 
+- name: Start ntp
+  service:
+    name: ntp
+    state: start
+
 - name: Enable sshd
   service:
     name: sshd
@@ -28,3 +33,5 @@
 
 - name: Restart GitLab
   command: gitlab-ctl reconfigure
+
+
