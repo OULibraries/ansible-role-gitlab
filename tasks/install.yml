@@ -12,8 +12,9 @@
   raw: /usr/src/gitlab.rpm.sh
 
 - name: Install GitLab
-  command: yum install gitlab-ce -y
-  async: 600
+  raw: >
+    sudo yum install gitlab-ce -y
+  async: 900
   poll: 30
 
 # Sometimes this fails out so we skip the failure
