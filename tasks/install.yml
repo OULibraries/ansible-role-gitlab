@@ -12,9 +12,7 @@
   raw: /usr/src/gitlab.rpm.sh
 
 - name: Install GitLab
-  yum:
-    name: gitlab-ce
-    state: installed
+  command: yum install gitlab-ce -y
 
 # Sometimes this fails out so we skip the failure
 - name: Initialize GitLab
