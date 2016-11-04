@@ -4,7 +4,7 @@
 - name: Start ntp
   service:
     name: ntp
-    state: start
+    state: started
 
 - name: Enable sshd
   service:
