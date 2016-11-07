@@ -1,18 +1,11 @@
 ---
 
-- name: Install NTP Service
+- name: Install ntp, curl, and openssh-clients
   yum:
-    name: ntp
-    state: present
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - ntp
+    - curl
+    - openssh-clients
   notify: Start ntp
-
-- name: Install curl
-  yum:
-    name: curl
-    state: present
-
-- name: Install openssh-clients
-  yum:
-    name: openssh-clients
-    state: present
-
