@@ -11,13 +11,6 @@
     name: curl
     state: present
 
-- name: Install openssh-server
-  yum:
-    name: openssh-server
-    state: present
-  notify: Enable sshd
-  notify: Start sshd
-
 - name: Install openssh-clients
   yum:
     name: openssh-clients
