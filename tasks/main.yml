@@ -5,10 +5,6 @@
   sudo: yes
   tags: yum
 
-- include: firewall.yml
-  sudo: yes
-  tags: firewall
-
 - include: install.yml
   sudo: yes
   tags: install
