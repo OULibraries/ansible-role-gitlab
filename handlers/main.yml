@@ -3,7 +3,7 @@
 
 - name: Start ntp
   service:
-    name: ntp
+    name: ntpd
     state: started
 
 - name: Restart GitLab
