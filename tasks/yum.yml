@@ -16,10 +16,3 @@
     name: openssh-clients
     state: present
 
-- name: Install postfix
-  yum:
-    name: postfix
-    state: present
-  notify: Enable postfix
-  notify: Start postfix
-
