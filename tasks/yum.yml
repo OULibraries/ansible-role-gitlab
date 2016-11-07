@@ -11,11 +11,6 @@
     name: curl
     state: present
 
-- name: Install policycoreutils
-  yum:
-    name: policycoreutils
-    state: present
-
 - name: Install openssh-server
   yum:
     name: openssh-server
