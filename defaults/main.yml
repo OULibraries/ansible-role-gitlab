@@ -1,6 +1,9 @@
 ---
 # defaults file for OULibraries.gitlab
 
+# md5sum of installer script as of 2016-12-06
+gitlab_md5sum: 4cb77144fcb86897e819ce24384c0b55
+
 # General config.
 gitlab_external_url: "https://gitlab/"
 gitlab_git_data_dir: "/var/opt/gitlab/git-data"
