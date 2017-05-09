@@ -27,3 +27,7 @@ You need at least 4GB of addressable memory (RAM + swap) to install and use GitL
 ## Initial Configuration
 
 After installation, direct your browser to the URL configured in defaults\main.yml. You will be prompted to change the password for the Root account.
+
+## License
+
+[MIT](https://github.com/OULibraries/ansible-role-gitlab/blob/master/LICENSE)
